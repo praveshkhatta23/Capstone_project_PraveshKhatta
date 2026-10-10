@@ -1,0 +1,23 @@
+MODE: offline fallback
+STATUS: success
+
+Situation
+The raw SQL layer reports revenue of ₹99,860.20. The independent pandas pipeline removes five duplicate submissions and calculates cleaned revenue of ₹97,358.30 across 175 orders. This gives stakeholders a reproducible baseline for returns and revenue monitoring.
+
+Complication
+COD has a return rate of 44.4%, compared with 14.7% for CARD and 18.9% for UPI. The highest-risk segment is COD in Tier-2 cities, where the return rate is 54.5%. The ₹2,501.90 difference between raw and cleaned revenue is exactly the combined value of the five duplicate rows; it is not caused by imputing missing discounts or ratings. January's apparent revenue of ₹29,582.10 is inflated by two unusually large-quantity orders.
+
+Resolution
+Prioritize a review of COD orders in Tier-2 cities and investigate return reasons before making policy changes; these patterns are descriptive and do not prove that COD causes returns. Use the outlier-corrected series for trend decisions: the true peak is 2026-03 at ₹20,318.90, while January's corrected revenue is ₹11,637.10. Continue flagging, not deleting, quantity outliers and reconcile revenue metrics with Finance before interpreting them as margin impact.
+
+NUMERIC ACCURACY CHECK
+{
+  "checks": {
+    "cleaned revenue 97358.30": true,
+    "COD return rate 44.4": true,
+    "COD + Tier-2 return rate 54.5": true,
+    "duplicate delta 2501.90": true,
+    "March peak revenue 20318.90": true
+  },
+  "all_pass": true
+}
