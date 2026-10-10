@@ -1,0 +1,121 @@
+{
+  "cleaned_total_revenue_inr": 97358.3,
+  "raw_total_revenue_inr": 99860.2,
+  "duplicate_reconciliation_delta_inr": 2501.9,
+  "return_rate_by_payment": {
+    "CARD": 14.7,
+    "COD": 44.4,
+    "UPI": 18.9
+  },
+  "highest_risk_segment": {
+    "payment_method": "COD",
+    "city_tier": 2,
+    "return_rate_pct": 54.5
+  },
+  "true_peak_month": {
+    "month": "2026-03",
+    "revenue_inr": 20318.9
+  },
+  "outlier_inflated_month": {
+    "month": "2026-01",
+    "apparent_revenue_inr": 29582.1,
+    "corrected_revenue_inr": 11637.1
+  },
+  "source_row_counts": {
+    "customers": 45,
+    "products": 16,
+    "orders": 180
+  },
+  "cleaned_order_count": 175,
+  "duplicate_rows_dropped": 5,
+  "duplicate_order_ids_dropped": [
+    "O0176",
+    "O0177",
+    "O0178",
+    "O0179",
+    "O0180"
+  ],
+  "missing_discount_imputed_zero": 12,
+  "missing_rating_imputed_median": 15,
+  "rating_median_used": 3.0,
+  "quantity_outliers": [
+    {
+      "order_id": "O0011",
+      "quantity": 25
+    },
+    {
+      "order_id": "O0098",
+      "quantity": 30
+    }
+  ],
+  "correlation_pairs": [
+    {
+      "variable_1": "rating",
+      "variable_2": "returned",
+      "correlation": -0.1015,
+      "strength": "negligible"
+    },
+    {
+      "variable_1": "rating",
+      "variable_2": "discount_pct",
+      "correlation": 0.0427,
+      "strength": "negligible"
+    },
+    {
+      "variable_1": "rating",
+      "variable_2": "quantity",
+      "correlation": -0.098,
+      "strength": "negligible"
+    },
+    {
+      "variable_1": "returned",
+      "variable_2": "discount_pct",
+      "correlation": -0.088,
+      "strength": "negligible"
+    },
+    {
+      "variable_1": "returned",
+      "variable_2": "quantity",
+      "correlation": 0.0406,
+      "strength": "negligible"
+    },
+    {
+      "variable_1": "discount_pct",
+      "variable_2": "quantity",
+      "correlation": -0.1704,
+      "strength": "negligible"
+    }
+  ],
+  "monthly_revenue": [
+    {
+      "month": "2026-01",
+      "revenue_including_outliers": 29582.1,
+      "revenue_excluding_outliers": 11637.1
+    },
+    {
+      "month": "2026-02",
+      "revenue_including_outliers": 13195.5,
+      "revenue_excluding_outliers": 13195.5
+    },
+    {
+      "month": "2026-03",
+      "revenue_including_outliers": 20318.9,
+      "revenue_excluding_outliers": 20318.9
+    },
+    {
+      "month": "2026-04",
+      "revenue_including_outliers": 9495.3,
+      "revenue_excluding_outliers": 9495.3
+    },
+    {
+      "month": "2026-05",
+      "revenue_including_outliers": 13151.1,
+      "revenue_excluding_outliers": 13151.1
+    },
+    {
+      "month": "2026-06",
+      "revenue_including_outliers": 11615.4,
+      "revenue_excluding_outliers": 11615.4
+    }
+  ]
+}
